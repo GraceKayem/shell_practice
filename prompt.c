@@ -3,7 +3,7 @@
 
 /**
  * main - program that prints "$ "
- * 
+ *
  * Return: Always 0.
 */
 int main(void)
@@ -17,21 +17,21 @@ int main(void)
 	{
 	printf("$ "); /*shows the prompt*/
 	fflush(stdout); /*prompt will br printed immediately*/
-    
+
 	/*reads the line from the standard input*/
-charRead = getline(&getInput, &length, stdin);
-    
-/*Checking for EOF (End-of-File) or error - makinf getline return to -1*/
-if (charRead == -1) /*returns -1*/
-{
-printf("\n");
-break; /*breaks out of loop and exits the program*/
-}    
-    
-/*Returning the input from the user as an output*/
-printf("%s", getInput);
-}
-    
-free(getInput); /*releases memory allocated by getline*/
-return (0);
+	charRead = getline(&getInput, &length, stdin);
+
+	/*Checking for EOF (End-of-File) or error - makinf getline return to -1*/
+	if (charRead == -1) /*returns -1*/
+	{
+	printf("\n");
+	break; /*breaks out of loop and exits the program*/
+	}
+
+	/*Returning the input from the user as an output*/
+	printf("%s", getInput);
+	}
+
+	free(getInput); /*releases memory allocated by getline*/
+	return (0);
 }
